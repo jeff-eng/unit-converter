@@ -1,0 +1,154 @@
+:root {
+    
+    --primary-color: #6943FF;
+    --primary-color-dark: #3f2899;
+    --bg-primary-color: #F4F4F4;
+    --bg-secondary-color: #FFF;
+    --bg-secondary-color-dark: #273549;
+    --bg-primary-color-dark: #1F2937;
+    --accent-color: #B295FF;
+    --text-secondary-color: #5A537B;
+    --text-secondary-color-dark: #CCC1FF;
+    --text-tertiary-color: #353535;
+    --text-tertiary-color-dark: var(--bg-secondary-color);
+    
+    --bg-body-color: #dbdbdb;
+    --bg-body-color-dark: #1C1C1C;
+    
+    --background: var(--bg-primary-color);
+    --background-secondary: var(--bg-secondary-color);
+    --primary-text-color: var(--bg-secondary-color);
+    --secondary-text-color: var(--text-secondary-color);
+    --tertiary-text-color: var(--text-tertiary-color);
+    
+    --body-bg: var(--bg-body-color);
+    
+    --dark-mode-transition: 0.3s ease-in-out;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    transition: 0.5s ease-in;
+    background: var(--body-bg);
+}
+
+main {
+    width: 550px;
+    min-height: 100%;
+    margin: 126px auto;
+}
+
+h1 {
+    margin: 0;
+    color: var(--primary-text-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 38px;
+    letter-spacing: -0.84px;
+}
+
+.dark-mode {
+    --bg-primary-color: var(--background);
+    --bg-secondary-color: var(--background-secondary);
+    
+    --primary-color: var(--primary-color-dark);
+    --background: var(--bg-primary-color-dark);
+    --background-secondary: var(--bg-secondary-color-dark);
+    --secondary-text-color: var(--text-secondary-color-dark);
+    --tertiary-text-color: var(--text-tertiary-color-dark);
+    --body-bg: var(--bg-body-color-dark);
+    
+    background: var(--body-bg);
+    
+    transition: var(--dark-mode-transition);
+}
+
+.dark-mode-btn-flip {
+    transform: scaleX(-1);
+}
+
+.unit-measure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-secondary);
+    min-width: 500px;
+    margin-bottom: 23.43px;
+}
+
+.unit-measure-heading {
+    color: var(--secondary-text-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 31px;
+    margin-bottom: 4.85px;
+}
+
+.unit-measure-display {
+    color: var(--tertiary-text-color);
+    margin-bottom: 18.57px;
+    height: 25px;
+}
+
+#user-input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 243px;
+    background: var(--primary-color);
+    transition: var(--dark-mode-transition);
+}
+
+#converted-units-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 36px;
+    padding-bottom: 12px;
+    background: var(--background);
+    transition: var(--dark-mode-transition);      
+}
+
+#number-input {
+    background: transparent;
+    padding-left: 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    color: var(--primary-text-color);
+    min-width: 120px;
+    max-width: 150px;
+    min-height: 83px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24.393px;
+}
+
+#number-input::placeholder {
+    color: #7a7595;
+    text-shadow: 0px 0px 5px var(--bg-secondary-color-dark);
+}
+
+#dark-mode-toggle, #dark-mode-toggle:focus {
+    position: absolute;
+    cursor: pointer;
+    top: 1em;
+    right: 1em;
+    background: none;
+    outline: none;
+    border: none;
+    rotate: 180deg;
+    fill: var(--primary-text-color);
+    transition: 0.5s ease-in-out;
+    margin: auto;
+}
